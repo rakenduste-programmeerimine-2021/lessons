@@ -16,6 +16,11 @@ docker-compose up -d
 ```
 - Rakendused on kättesaadavad
 
+- Selleks, et peatada kõik teenused
+```
+docker-compose stop
+```
+
 Frontend react - http://localhost:3000/
 
 Backend node - http://localhost:8081/
