@@ -17,4 +17,10 @@ docker-compose up -d
 - Rakendused on kättesaadavad
 
 Frontend react - http://localhost:3000/
+
 Backend node - http://localhost:8081/
+
+## Troubleshoot
+
+- Probleemi ilmnemisel võid vaadata, kas probleem Dockeris ja reinstallida see
+- Kustutada node_modules kaust mõlemast folderist ja installida need ülemiste käskudega uuesti
