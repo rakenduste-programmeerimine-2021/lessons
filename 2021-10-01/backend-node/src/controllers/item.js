@@ -16,9 +16,9 @@ exports.createItem = async (req, res) => {
 
   const createdItem = new Item(newItem)
 
-  const savedItem = createdItem.save()
+  const savedItem = await createdItem.save()
 
-  res.status(200).send("yay")
+  res.status(200).send(`yay ${savedItem._id}`)
 }
 
 exports.updateItem = async (req, res) => {
@@ -30,5 +30,7 @@ exports.deleteItem = async (req, res) => {
 
   const item = await Item.findOneAndDelete({ _id: id })
 
-  console.log(item)
+  if (!item) res.status(404).send("No item with that id found")
+
+  res.status(200).send(`Successfully deleted the following item: \n ${item}`)
 }
