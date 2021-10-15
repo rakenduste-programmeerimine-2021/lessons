@@ -9,8 +9,15 @@ const postReducer = (state, action) => {
       };
     case POST_REMOVE:
       return {
-        ...state
+        ...state,
+        data: state.data.filter(post => post.id !== action.payload)
       }
+    // Kodutööna uue listi vastu võtmine maybe
+    case "POSTS_UPDATE": 
+        return {
+          ...state,
+          data: action.payload
+        }
     default:
       return state
   }
