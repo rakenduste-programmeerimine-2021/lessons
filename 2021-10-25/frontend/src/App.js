@@ -5,6 +5,7 @@ import Cart from './pages/Cart';
 import Navbar from './components/Navbar';
 import AddItem from './pages/AddItem';
 import AdminHome from './pages/AdminHome';
+import SingleItem from './pages/SingleItem';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
       </Route>
       <Route path='/admin'>
         <AdminHome />
+      </Route>
+      <Route path='/item/:itemId'>
+        <SingleItem />
       </Route>
     </div>
   );
