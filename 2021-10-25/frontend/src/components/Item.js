@@ -21,7 +21,9 @@ function Item(props) {
       { props.isAddToCartButton ? <button>Lisa ostukorvi</button> : 
             <div>
               <button onClick={()=>handleDelete(props.id)}>X</button>
-              <button>Muuda toode</button>
+              <Link to={`edit-item/${props.id}`}>
+                <button>Muuda toode</button>
+              </Link>
             </div> }
     </div>
   )

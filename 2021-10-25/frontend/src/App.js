@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import AddItem from './pages/AddItem';
 import AdminHome from './pages/AdminHome';
 import SingleItem from './pages/SingleItem';
+import EditItem from './pages/EditItem';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
       </Route>
       <Route path='/item/:itemId'>
         <SingleItem />
+      </Route>
+      <Route path='/edit-item/:itemId'>
+        <EditItem />
       </Route>
     </div>
   );
